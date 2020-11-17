@@ -27,7 +27,7 @@ namespace UWP_Button_to_execute_code
             this.InitializeComponent();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private void Photo_Click(object sender, RoutedEventArgs e)
         {
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
             picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
@@ -46,6 +46,11 @@ namespace UWP_Button_to_execute_code
             {
                 this.textBox.Text = "Operation cancelled.";
             }
+        }
+
+        private void FileExplorer_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
