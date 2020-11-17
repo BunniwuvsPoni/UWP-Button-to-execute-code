@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button Content="Launch File Explorer" Height="280" Margin="521,339,0,0" VerticalAlignment="Top" Width="604" Click="Button_Click"/>
 
     </Grid>
 </Page>

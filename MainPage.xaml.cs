@@ -26,5 +26,10 @@ namespace UWP_Button_to_execute_code
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
