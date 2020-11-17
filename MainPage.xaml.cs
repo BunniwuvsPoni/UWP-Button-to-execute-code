@@ -80,5 +80,26 @@ namespace UWP_Button_to_execute_code
                 this.textBoxPhotos.Text = "Operation cancelled.";
             }
         }
+
+        private async void Folder_Click(object sender, RoutedEventArgs e)
+        {
+            var folderPicker = new Windows.Storage.Pickers.FolderPicker();
+            folderPicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Desktop;
+            folderPicker.FileTypeFilter.Add("*");
+
+            Windows.Storage.StorageFolder folder = await folderPicker.PickSingleFolderAsync();
+            if (folder != null)
+            {
+                // Application now has read/write access to all contents in the picked folder
+                // (including other sub-folder contents)
+                Windows.Storage.AccessCache.StorageApplicationPermissions.
+                FutureAccessList.AddOrReplace("PickedFolderToken", folder);
+                this.textBoxFolder.Text = "Picked folder: " + folder.Name;
+            }
+            else
+            {
+                this.textBoxFolder.Text = "Operation cancelled.";
+            }
+        }
     }
 }
