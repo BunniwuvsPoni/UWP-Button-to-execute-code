@@ -6,6 +6,8 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -49,9 +51,9 @@ namespace UWP_Button_to_execute_code
             }
         }
 
-        private void FileExplorer_Click(object sender, RoutedEventArgs e)
+        private async void FileExplorer_Click(object sender, RoutedEventArgs e)
         {
-
+            await Launcher.LaunchFolderAsync(ApplicationData.Current.LocalFolder);
         }
 
         private async void Photos_Click(object sender, RoutedEventArgs e)
