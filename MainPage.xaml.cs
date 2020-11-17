@@ -32,6 +32,7 @@ namespace UWP_Button_to_execute_code
 
         private async void Photo_Click(object sender, RoutedEventArgs e)
         {
+            // Setup picker to only show images
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
             picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
             picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
@@ -53,11 +54,15 @@ namespace UWP_Button_to_execute_code
 
         private async void FileExplorer_Click(object sender, RoutedEventArgs e)
         {
-            await Launcher.LaunchFolderAsync(ApplicationData.Current.LocalFolder);
+            // Launched the path C:\
+            string path = @"C:\";
+
+            await Launcher.LaunchFolderPathAsync(path);
         }
 
         private async void Photos_Click(object sender, RoutedEventArgs e)
         {
+            // Setup picker to only show images
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
             picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
             picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
@@ -85,6 +90,7 @@ namespace UWP_Button_to_execute_code
 
         private async void Folder_Click(object sender, RoutedEventArgs e)
         {
+            // Setup picker to select folders
             var folderPicker = new Windows.Storage.Pickers.FolderPicker();
             folderPicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Desktop;
             folderPicker.FileTypeFilter.Add("*");
