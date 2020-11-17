@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Content="Launch File Explorer" Height="280" Margin="521,339,0,0" VerticalAlignment="Top" Width="604" Click="Button_Click"/>
+        <Button x:Name="FileExplorer" Content="Launch File Explorer" Height="93" Margin="92,77,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click"/>
+        <Button x:Name="FilePicker" Content="Open File Picker" Height="93" Margin="92,228,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click"/>
 
     </Grid>
 </Page>
