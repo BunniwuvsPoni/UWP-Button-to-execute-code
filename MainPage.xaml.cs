@@ -40,11 +40,11 @@ namespace UWP_Button_to_execute_code
             if (file != null)
             {
                 // Application now has read/write access to the picked file
-                this.textBlock.Text = "Picked photo: " + file.Name;
+                this.textBox.Text = "Picked photo: " + file.Name;
             }
             else
             {
-                this.textBlock.Text = "Operation cancelled.";
+                this.textBox.Text = "Operation cancelled.";
             }
         }
     }

@@ -10,7 +10,8 @@
 
     <Grid>
         <Button x:Name="FileExplorer" Content="Launch File Explorer" Height="93" Margin="92,77,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click"/>
-        <Button x:Name="FilePicker" Content="Open File Picker" Height="93" Margin="92,228,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click"/>
+        <Button x:Name="FilePicker" Content="Open File Picker - Photos" Height="93" Margin="92,228,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="61" Margin="337,244,0,0" Text="Photo to be picked" TextWrapping="Wrap" VerticalAlignment="Top" Width="263"/>
 
     </Grid>
 </Page>
